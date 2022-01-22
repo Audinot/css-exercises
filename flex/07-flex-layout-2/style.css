@@ -1,28 +1,80 @@
+/* Let's remove all the browser margins */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   min-height: 100vh;
+  box-sizing: border-box;
+  /* Push the footer to the bottom */
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   height: 72px;
   background: darkmagenta;
   color: white;
+  /* Adding style and flex to the header bar */
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+.title {
+  margin-left: 16px;
 }
 
+/* Make the main content grow to fill all the space and push footer,
+also set the sidebar and card areas to flow across */
+.main-page {
+  flex-grow: 3;
+  display: flex;
+}
+
+/* Center footer horizontally and vertically */
 .footer {
   height: 72px;
   background: #eee;
   color: darkmagenta;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* The sidebar is always 300px, and the links are styled */
 .sidebar {
   width: 300px;
+  flex-shrink: 0;
   background: royalblue;
+  padding: 16px;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li {
+  margin-bottom: 16px;
+}
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
 }
 
+/* Styling the card content */
+.content {
+  padding: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+  width: 300px;
+  padding: 16px;
 }
