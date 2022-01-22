@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* margin and padding reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   height: 100vh;
-  margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  /* Flow top to bottom: Header > Content > Footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 img {
@@ -16,6 +25,8 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* instructions ask for padding */
+  padding: 10px 15px;
 }
 
 input {
@@ -24,4 +35,45 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+/* Layout header and footer */
+.header,
+.footer {
+  display: flex;
+  padding: 15px 10px;
+  justify-content: space-between;
+}
+
+.left-links,
+.right-links {
+  list-style: none;
+  display: flex;
+}
+
+/* Style header and footer */
+ul {
+  padding: 0px;
+  display: flex;
+  gap: 30px;
+}
+
+li a {
+  text-decoration: none;
+  color: #888;
+}
+li a:hover {
+  color: #555;
+}
+
+.footer {
+  background-color: #eee;
+}
+
+/* Style content to be centered horizontally and vertically */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
