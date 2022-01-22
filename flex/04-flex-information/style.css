@@ -1,5 +1,6 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  background: #eee;
 }
 
 img {
@@ -10,6 +11,25 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  margin-bottom: 32px;
+}
+
+.horizontal {
+  display: flex;
+  justify-content: space-evenly;
+  /* gap: 52px; */
+}
+
+/* For the real solution, I would use gap and text-align: center the title,
+but this doesn't work in Atom browser and I like things to work in both
+Atom and Chrome. */
+
+.item {
+  max-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
 }
 
 /* do not edit this footer */
