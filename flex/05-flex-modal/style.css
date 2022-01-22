@@ -20,6 +20,28 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  flex: 0 0 auto;
+  padding: 15px;
+  height: 180px;;
+  min-width: 450px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+.top-row {
+  display: flex;
+  align-items: flex-start;
+  flex: 0 0 auto;
+}
+.top-row .header {
+  margin-right: auto;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .icon {
